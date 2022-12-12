@@ -31,6 +31,10 @@
                     column：将查询出的某个字段作为分布查询的sql的条件
                     fetchType:在开启延迟加载的环境中，通过该属性设置当前的分布查询是否使用延迟加载
                         eager 立即加载 | lazy 延迟加载
+           5.处理一对多的映射关系
+                1.collection:处理一对多的映射关系(处理集合类型的属性)
+                    ofType:设置集合类型中存储的数据的类型
+            2分布查询
     -->
     <resultMap id="empResultMap" type="Emp">
         <id column="emp_id" property="empId"></id>
@@ -93,5 +97,11 @@
     <select id="getEmpAndDeptByStepOne" resultMap="empAndDeptByStepResultMap">
         select * from t_emp where emp_id = #{empId}
     </select>
+
+    <!--List<Emp> getDeptAndEmpByStepTwo(@Param("deptId") Integer deptId);-->
+    <select id="getDeptAndEmpByStepTwo" resultType="Emp">
+        SELECT * FROM t_emp WHERE dept_id = #{deptId}
+    </select>
+
 
 </mapper>

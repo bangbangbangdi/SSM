@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.mybatis.mapper.DynamicSQLMapper">
+    <!--
+        动态SQL：
+            1.if：通过test属性中的表达式判断标签中的内容是否生效（是否会拼接到SQL中）
+    -->
+    <!--List<Emp> getEmpByCondition(@Param("emp")Emp emp);-->
+    <select id="getEmpByCondition" resultType="Emp">
+        select * from t_emp where
+        <if test="empName != null and empName != ''">
+            emp_name = #{empName}
+        </if>
+        <if test="age != null and age != ''">
+            and age = #{age}
+        </if>
+        <if test="gender != null and gender != ''">
+            and gender = #{gender}
+        </if>
+    </select>
+
+    <select id="getEmpByConditionDiscard" resultType="Emp">
+        select * from t_emp where
+        <if test="empName != null and empName != ''">
+            emp_name = #{empName}
+        </if>
+        <if test="age != null and age != ''">
+            and age = #{age}
+        </if>
+        <if test="gender != null and gender != ''">
+            and gender = #{gender}
+        </if>
+    </select>
+</mapper>
