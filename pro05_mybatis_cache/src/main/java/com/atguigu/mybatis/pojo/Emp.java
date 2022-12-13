@@ -1,6 +1,8 @@
 package com.atguigu.mybatis.pojo;
 
-public class Emp {
+import java.io.Serializable;
+
+public class Emp implements Serializable {
 
     private Integer empId;
 
