@@ -4,15 +4,17 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pro01_mybatis_helloworld/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis_helloworld/pom.xml" />
         <option value="$PROJECT_DIR$/pro02_mybatis_parameter/pom.xml" />
+        <option value="$PROJECT_DIR$/pro01_mybatis_helloworld/pom.xml" />
         <option value="$PROJECT_DIR$/pro03_mybatis_resultMap/pom.xml" />
         <option value="$PROJECT_DIR$/pro04_mybatis_dynamicSQL/pom.xml" />
-        <option value="$PROJECT_DIR$/mybatis_cache/pom.xml" />
         <option value="$PROJECT_DIR$/pro05_mybatis_cache/pom.xml" />
         <option value="$PROJECT_DIR$/pro06_mybatis_mbg/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
 </project>

@@ -8,13 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="pro01_mybatis_helloworld" />
         <module name="pro06_mybatis_mbg" />
-        <module name="pro02_mybatis_parameter (2)" />
-        <module name="pro02_mybatis_parameter (1)" />
+        <module name="pro05_mybatis_cache" />
         <module name="pro03_mybatis_resultMap" />
         <module name="pro04_mybatis_dynamicSQL" />
-        <module name="mybatis_helloworld" />
         <module name="pro02_mybatis_parameter" />
-        <module name="pro05_mybatis_cache" />
       </profile>
     </annotationProcessing>
   </component>
