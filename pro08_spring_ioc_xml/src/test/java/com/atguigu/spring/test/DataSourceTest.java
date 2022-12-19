@@ -1,7 +1,6 @@
 package com.atguigu.spring.test;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import javafx.application.Application;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

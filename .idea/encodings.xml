@@ -13,5 +13,9 @@
     <file url="file://$PROJECT_DIR$/pro05_mybatis_cache/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro06_mybatis_mbg/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro06_mybatis_mbg/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro07_spring_helloworld/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro07_spring_helloworld/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro08_spring_ioc_xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro08_spring_ioc_xml/src/main/resources" charset="UTF-8" />
   </component>
 </project>
