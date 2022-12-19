@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
 
     <bean id="studentOne" class="com.atguigu.spring.pojo.Student"></bean>
@@ -52,11 +53,57 @@
                 <property name="cname" value="丢丢丢"></property>
             </bean>
         </property>
+        <property name="hobby">
+            <array>
+                <value>抽烟</value>
+                <value>喝酒</value>
+                <value>烫头</value>
+            </array>
+        </property>
+        <property name="teacherMap">
+            <!--<map>-->
+            <!--    <entry key="10086" value-ref="teacherOne"></entry>-->
+            <!--    <entry key="10010" value-ref="teacherTwo"></entry>-->
+            <!--</map>-->
+            <ref bean="teacherMap"></ref>
+        </property>
     </bean>
 
     <bean id="clazzOne" class="com.atguigu.spring.pojo.Clazz">
         <property name="cid"  value="0001"></property>
         <property name="cname" value="咩咩咩"></property>
+        <property name="students">
+            <!--<list>-->
+            <!--    <ref bean="studentOne"></ref>-->
+            <!--    <ref bean="studentTwo"></ref>-->
+            <!--    <ref bean="studentThree"></ref>-->
+            <!--</list>-->
+            <ref bean="studentList"></ref>
+        </property>
     </bean>
+
+    <util:list id="studentList">
+        <ref bean="studentOne"></ref>
+        <ref bean="studentTwo"></ref>
+        <ref bean="studentThree"></ref>
+    </util:list>
+
+    <util:map id="teacherMap">
+        <entry key="10086" value-ref="teacherOne"></entry>
+        <entry key="10010" value-ref="teacherTwo"></entry>
+    </util:map>
+
+    <bean id="teacherOne" class="com.atguigu.spring.pojo.Teacher">
+        <property name="tid" value="10086"></property>
+        <property name="tname" value="小罗"></property>
+    </bean>
+
+    <bean id="teacherTwo" class="com.atguigu.spring.pojo.Teacher">
+        <property name="tid" value="10010"></property>
+        <property name="tname" value="大罗"></property>
+    </bean>
+
+   <bean id="studentSix" class="com.atguigu.spring.pojo.Student"
+         p:sid="1005" p:sname="伊布" p:teacherMap-ref="teacherMap"></bean>
 
 </beans>
