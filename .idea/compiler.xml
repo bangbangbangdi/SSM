@@ -12,6 +12,7 @@
         <module name="pro03_mybatis_resultMap" />
         <module name="pro04_mybatis_dynamicSQL" />
         <module name="pro02_mybatis_parameter" />
+        <module name="pro10_spring-proxy" />
         <module name="pro05_mybatis_cache" />
         <module name="pro09_spring_ioc_annnotation" />
         <module name="pro07_spring_helloworld" />
