@@ -14,6 +14,7 @@
         <module name="pro02_mybatis_parameter" />
         <module name="pro10_spring-proxy" />
         <module name="pro11_spring-aop" />
+        <module name="pro12_spring-transation" />
         <module name="pro05_mybatis_cache" />
         <module name="pro09_spring_ioc_annnotation" />
         <module name="pro07_spring_helloworld" />
