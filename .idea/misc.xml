@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/pro13_spring_mvc_helloworld" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -18,6 +21,7 @@
         <option value="$PROJECT_DIR$/pro11_spring-aop/pom.xml" />
         <option value="$PROJECT_DIR$/spring-transation/pom.xml" />
         <option value="$PROJECT_DIR$/pro12_spring-transation/pom.xml" />
+        <option value="$PROJECT_DIR$/pro13_spring_mvc_helloworld/pom.xml" />
       </list>
     </option>
   </component>

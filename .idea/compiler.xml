@@ -6,16 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="pro04_mybatis_dynamicSQL" />
+        <module name="pro11_spring-aop" />
+        <module name="pro05_mybatis_cache" />
         <module name="pro01_mybatis_helloworld" />
         <module name="pro06_mybatis_mbg" />
+        <module name="pro13_spring_mvc_helloworld" />
         <module name="pro08_spring_ioc_xml" />
         <module name="pro03_mybatis_resultMap" />
-        <module name="pro04_mybatis_dynamicSQL" />
         <module name="pro02_mybatis_parameter" />
         <module name="pro10_spring-proxy" />
-        <module name="pro11_spring-aop" />
         <module name="pro12_spring-transation" />
-        <module name="pro05_mybatis_cache" />
         <module name="pro09_spring_ioc_annnotation" />
         <module name="pro07_spring_helloworld" />
       </profile>
