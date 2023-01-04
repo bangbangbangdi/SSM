@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>index.html</h1>
+<a th:href="@{/hello}">Test RequestMapping annotation location</a><br>
+<a th:href="@{/abc}">Test RequestMapping annotation value-attribute</a><br>
+<form th:action="@{/hello}" method="post">
+    <input type="submit" value="Test RequestMapping annotation method-attribute">
+</form>
+<a th:href="@{/hello?username=admin}">Test RequestMapping annotation params-attribute</a><br>
+<a th:href="@{/hello(username='admin')}">Test RequestMapping annotation params-attribute</a><br>
+<a th:href="@{/axa/test/ant}">Test RequestMapping annotation support ant-style path</a><br>
+<a th:href="@{/test/rest/admin/1}">Test RequestMapping annotation value-attribute-placeholder</a><br>
+<hr>
+<form th:action="@{/param/pojo}" method="post">
+    username：<input type="text" name="username"><br>
+    password：<input type="password" name="password"><br>
+    <input type="submit" value="login"><br>
+</form>
+<a th:href="@{/test/mav}">Test share data to request by ModelAndView</a><br>
+<a th:href="@{/test/model}">Test share data to request by Model</a><br>
+<a th:href="@{/test/modelMap}">Test share data to request by ModelMap</a><br>
+<a th:href="@{/test/map}">Test share data to request by Map</a><br>
+<a th:href="@{/test/session}">Test share data to session by session</a><br>
+<a th:href="@{/test/application}">Test share data to application by application</a><br>
+<hr>
+<a th:href="@{/test/view/thymeleaf}">Test ThymeleafView</a><br>
+<a th:href="@{/test/view/forward}">Test InternalResourceView</a><br>
+<a th:href="@{/test/view/redirect}">Test RedirectView</a><br>
+</body>
+</html>

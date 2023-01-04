@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>index.html</h1>
+<a th:href="@{/user}">Select all user info</a><br>
+<a th:href="@{/user/1}">Select user info that id equal 1</a><br>
+<form th:action="@{/user}" method="post">
+    <input type="submit" value="add user">
+</form>
+<form th:action="@{/user}" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="submit" value="update user info">
+</form>
+<form th:action="@{/user/5}" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="delete user">
+</form>
+<a th:href="@{/employee}">select all employees info</a>
+</body>
+</html>
