@@ -8,6 +8,8 @@
     <file type="web" url="file://$PROJECT_DIR$/pro16_spring_mvc_ajax" />
     <file type="web" url="file://$PROJECT_DIR$/pro17_spring_mvc_extension" />
     <file type="web" url="file://$PROJECT_DIR$/pro18_spring_mvc_annotation" />
+    <file type="web" url="file://$PROJECT_DIR$/pro19_spring_listener" />
+    <file type="web" url="file://$PROJECT_DIR$/pro20_ssm" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -32,6 +34,8 @@
         <option value="$PROJECT_DIR$/pro16_spring_mvc_ajax/pom.xml" />
         <option value="$PROJECT_DIR$/pro17_spring_mvc_extension/pom.xml" />
         <option value="$PROJECT_DIR$/pro18_spring_mvc_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/pro19_spring_listener/pom.xml" />
+        <option value="$PROJECT_DIR$/pro20_ssm/pom.xml" />
       </list>
     </option>
   </component>
