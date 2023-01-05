@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--
+        MyBatis核心配置文件中的标签必须要按照指定的顺序配置
+            properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,
+            objectWrapperFactory?,reflectorFactory?,plugins?,environments?,databaseIdProvider?,mappers?
+    -->
+    <!--<properties resource="jdbc.properties"></properties>-->
+    
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    
+    <!--
+    <typeAliases>
+        <package name="/"></package>
+    </typeAliases>
+    -->
+    <!--
+    <environments default="development">
+
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                &lt;!&ndash; For Windows &ndash;&gt;
+                &lt;!&ndash;<property name="password" value="${jdbc.password}"/>&ndash;&gt;
+                &lt;!&ndash; For Mac &ndash;&gt;
+                <property name="password" value="jiangui.1"/>
+            </dataSource>
+        </environment>
+    </environments>
+    -->
+    <!--<mappers>-->
+    <!--    <package name="/"></package>-->
+    <!--</mappers>-->
+    
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+    
+</configuration>
