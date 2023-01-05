@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" th:href="@{static/css/index_work.css}">
+    <link rel="stylesheet" th:href="@{/static/css/index_work.css}">
 </head>
 <body>
-
+<table>
+    <tr>
+        <th colspan="6">employee list</th>
+    </tr>
+    <tr>
+        <th>serial number</th>
+        <th>empName</th>
+        <th>age</th>
+        <th>gender</th>
+        <th>email</th>
+        <th>operate</th>
+    </tr>
+    <tr th:each="employee,status : ${page.list}">
+        <td th:text="${status.count}"></td>
+        <td th:text="${employee.empName}"></td>
+        <td th:text="${employee.age}"></td>
+        <td th:text="${employee.gender}"></td>
+        <td th:text="${employee.email}"></td>
+        <td>
+            <a href="">delete</a>
+            <a href="">update</a>
+        </td>
+    </tr>
+</table>
+<div style="text-align: center">
+    <a th:if="${page.hasPreviousPage}" th:href="@{/employee/page/1}">first</a>
+    <a th:if="${page.hasPreviousPage}" th:href="@{'/employee/page/'+${page.prePage}}">previous</a>
+    <span th:each="num : ${page.navigatepageNums}">
+        <a th:if="${page.pageNum == num}" style="color: red;" th:href="@{'/employee/page/'+${num}}" th:text="'['+${num}+']'"></a>
+        <a th:if="${page.pageNum != num}" th:href="@{'/employee/page/'+${num}}" th:text="${num}"></a>
+    </span>
+    <a th:if="${page.hasNextPage}" th:href="@{'/employee/page/'+${page.nextPage}}">next</a>
+    <a th:if="${page.hasNextPage}" th:href="@{'/employee/page/'+${page.pages}}">last</a>
+</div>
 </body>
 </html>
