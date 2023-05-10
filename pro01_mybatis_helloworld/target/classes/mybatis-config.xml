@@ -11,6 +11,9 @@
     <!--引入properties文件,此后就可以再当前文件中使用${key}的方式访问value-->
     <properties resource="jdbc.properties">
     </properties>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
     <!--typeAliases:设置别名，为某个具体的类型设置别名，在mybatis的范围中，就可以使用别名来表示一个具体的类型-->
     <typeAliases>
         <!--
