@@ -12,7 +12,7 @@ public class ResultMapTest {
     public void testGetEmpByEmpID() {
         SqlSession sqlSession = SqlSessionUtil.getSqlSession();
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
-        Emp emp = mapper.getEmpByEmpId(2);
+        Emp emp = mapper.getEmpByEmpId(1);
         System.out.println("emp = " + emp);
     }
 
@@ -20,7 +20,7 @@ public class ResultMapTest {
     public void testGetEmpAndDeptByEmpId() {
         SqlSession sqlSession = SqlSessionUtil.getSqlSession();
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
-        Emp emp = mapper.getEmpAndDeptByEmpId(2);
+        Emp emp = mapper.getEmpAndDeptByEmpId(1);
         System.out.println("emp = " + emp);
     }
 
@@ -28,7 +28,8 @@ public class ResultMapTest {
     public void testGetEmpAndDeptByStep() {
         SqlSession sqlSession = SqlSessionUtil.getSqlSession();
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
-        Emp emp = mapper.getEmpAndDeptByStepOne(2);
+        Emp emp = mapper.getEmpAndDeptByStepOne(3);
+        // fetchType="eager" 因此懒加载无效
         System.out.println("emp.getEmpName() = " + emp.getEmpName());
     }
 
@@ -36,7 +37,7 @@ public class ResultMapTest {
     public void testDeptAndEmpByDeptId() {
         SqlSession sqlSession = SqlSessionUtil.getSqlSession();
         DeptMapper mapper = sqlSession.getMapper(DeptMapper.class);
-        Dept dept = mapper.getDeptAndEmpByDeptId(1);
+        Dept dept = mapper.getDeptAndEmpByDeptId(10);
         System.out.println("dept = " + dept);
     }
 
@@ -44,7 +45,15 @@ public class ResultMapTest {
     public void testDeptAndEmpByStep() {
         SqlSession sqlSession = SqlSessionUtil.getSqlSession();
         DeptMapper mapper = sqlSession.getMapper(DeptMapper.class);
-        Dept dept = mapper.getDeptAndEmpByStepOne(2);
+        Dept dept = mapper.getDeptAndEmpByStepOne(10);
         System.out.println("dept = " + dept.getDeptName());
+    }
+
+    @Test
+    public void getEmpByMtlParamStepOne(){
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+        Emp emp = mapper.getEmpByMtlParamStepOne(3);
+        System.out.println("emp = " + emp);
     }
 }

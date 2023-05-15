@@ -38,4 +38,8 @@
         SELECT * FROM t_dept WHERE dept_id = #{deptId}
     </select>
 
+    <!--Dept getEmpAndDeptByStepTwo1(@Param("deptId") Integer deptId,@Param("deptName")String deptName);-->
+    <select id="getEmpAndDeptByStepTwo2" resultType="Dept">
+        select * from t_dept where dept_id = #{deptId} AND dept_name = #{deptName}
+    </select>
 </mapper>

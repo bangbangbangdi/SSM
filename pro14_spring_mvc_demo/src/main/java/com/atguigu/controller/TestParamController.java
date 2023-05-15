@@ -28,8 +28,7 @@ public class TestParamController {
             @RequestParam(value = "userName", required = false, defaultValue = "hello") String username
             , String password
             , @RequestHeader("referer") String referer
-            , @CookieValue("JSESSIONID") String jsessionId
-    ) {
+            , @CookieValue("JSESSIONID") String jsessionId) {
         System.out.println("username = " + username);
         System.out.println("password = " + password);
         System.out.println("referer = " + referer);

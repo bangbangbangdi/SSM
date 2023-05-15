@@ -87,7 +87,8 @@
         <result column="emp_name" property="empName"></result>
         <result column="age" property="age"></result>
         <result column="gender" property="gender"></result>
-        <association property="dept" fetchType="eager"
+        <association property="dept"
+                     fetchType="eager"
                      select="com.atguigu.mybatis.mapper.DeptMapper.getEmpAndDeptByStepTwo"
                      column="dept_id">
         </association>
@@ -103,5 +104,20 @@
         SELECT * FROM t_emp WHERE dept_id = #{deptId}
     </select>
 
+    <resultMap id="empByMtlParamStepOne" type="Emp">
+        <id column="emp_id" property="empId"></id>
+        <result column="emp_name" property="empName"></result>
+        <result column="age" property="age"></result>
+        <result column="gender" property="gender"></result>
+        <association property="dept"
+                     fetchType="eager"
+                     select="com.atguigu.mybatis.mapper.DeptMapper.getEmpAndDeptByStepTwo2"
+                     column="{deptId=dept_id,deptName=dept_name}">
+        </association>
+    </resultMap>
 
+    <!--Emp getEmpByMtlParamStepOne(@Param("empId")Integer empId);-->
+    <select id="getEmpByMtlParamStepOne" resultMap="empByMtlParamStepOne">
+        select *,"10" as dept_id,"miemie" as dept_name from t_emp where emp_id = #{empId}
+    </select>
 </mapper>

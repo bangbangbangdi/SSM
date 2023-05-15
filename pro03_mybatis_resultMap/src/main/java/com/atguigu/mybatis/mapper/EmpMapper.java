@@ -27,4 +27,13 @@ public interface EmpMapper {
     * */
     List<Emp> getDeptAndEmpByStepTwo(@Param("deptId") Integer deptId);
 
+    /**
+     * @param null:
+      * @return null
+     * @author BangDi
+     * @description TODO
+     * @date 2023/5/12 10:11
+     */
+    Emp getEmpByMtlParamStepOne(@Param("empId")Integer empId);
+
 }

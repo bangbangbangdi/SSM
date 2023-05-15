@@ -34,7 +34,7 @@
            5.处理一对多的映射关系
                 1.collection:处理一对多的映射关系(处理集合类型的属性)
                     ofType:设置集合类型中存储的数据的类型
-            2分布查询
+                2.分布查询
     -->
     <resultMap id="empResultMap" type="Emp">
         <id column="emp_id" property="empId"></id>
@@ -87,7 +87,8 @@
         <result column="emp_name" property="empName"></result>
         <result column="age" property="age"></result>
         <result column="gender" property="gender"></result>
-        <association property="dept" fetchType="eager"
+        <association property="dept"
+                     fetchType="eager"
                      select="com.atguigu.mybatis.mapper.DeptMapper.getEmpAndDeptByStepTwo"
                      column="dept_id">
         </association>
@@ -103,5 +104,20 @@
         SELECT * FROM t_emp WHERE dept_id = #{deptId}
     </select>
 
+    <resultMap id="empByMtlParamStepOne" type="Emp">
+        <id column="emp_id" property="empId"></id>
+        <result column="emp_name" property="empName"></result>
+        <result column="age" property="age"></result>
+        <result column="gender" property="gender"></result>
+        <association property="dept"
+                     fetchType="eager"
+                     select="com.atguigu.mybatis.mapper.DeptMapper.getEmpAndDeptByStepTwo2"
+                     column="{deptId=deptId,deptName=dept_name}">
+        </association>
+    </resultMap>
 
+    <!--Emp getEmpByMtlParamStepOne(@Param("empId")Integer empId);-->
+    <select id="getEmpByMtlParamStepOne" resultMap="empByMtlParamStepOne">
+        select *,"10" as deptId,"miemie" as dept_name from t_emp where emp_id = #{empId}
+    </select>
 </mapper>
